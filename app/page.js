@@ -28,16 +28,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen pt-40 text-white"  style={{ backgroundImage: `url("/sunny.png")`, backgroundSize: 'cover'}}>
-      <h1 className="text-4xl mb-4">Weather Watch</h1>
+      <h1 className="text-4xl mb-4 w-50 m-auto">Weather Watch</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
-        <label className="mb-2 font-extrabold text-4xl mb-4">
+        <label className="w-50 m-auto font-extrabold text-xl md:text-4xl mb-4">
           Enter Current Location:
           <input
             type="text"
             name="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className="block text-black mt-1 px-2 py-1 m-auto border border-gray-600 rounded"
+            className="block h-10 w-40 md:w-50 text-black mt-1 px-2 py-1 m-auto border border-gray-600 rounded"
           />
         </label>
         <button
@@ -56,7 +56,7 @@ export default function Home() {
           <p>Weather: {weather.weather[0].description}</p>
         </div>
       )}
-      <footer className="pt-40 text-white py-4 flex items-end">
+      <footer className="pt-40 text-white py-4 md:flex items-end">
       <div className="container mx-auto flex justify-between items-center px-4">
         <div>
           <p className="text-sm">© {new Date().getFullYear()} Silas Okanlawon. All rights reserved.</p>
