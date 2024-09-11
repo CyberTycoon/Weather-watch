@@ -2,7 +2,7 @@
   "name": "weather-watch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/CyberTycoon/weatherApp.git",
+  "homepage": "https://github.com/CyberTycoon/weather-app.git",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -27,12 +27,12 @@
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CyberTycoon/weatherApp.git"
+    "url": "git+https://github.com/CyberTycoon/weather-app.git"
   },
   "author": "Silas Okanlawon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CyberTycoon/weather-watch/issues"
+    "url": "https://github.com/CyberTycoon/weather-app/issues"
   }
 }
 
