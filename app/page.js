@@ -15,6 +15,13 @@ export default function Home() {
     setLoading(true);
     setError(null);
 
+     // Validate the input
+  if (!location.trim()) {
+    setError('Please enter a valid location');
+    setLoading(false); // Stop loading
+    return;
+  }
+
     try {
       const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
       const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=3f420190590cb3679a8d8fb9d93288d7&units=metric`);
@@ -36,8 +43,9 @@ export default function Home() {
             type="text"
             name="location"
             value={location}
+            placeholder='Enter Location'
             onChange={(e) => setLocation(e.target.value)}
-            className="block h-10 w-40 md:w-50 text-black mt-1 px-2 py-1 m-auto border border-gray-600 rounded"
+            className="block h-10 w-40 md:w-50 text-xl  text-black mt-1 px-2 py-1 m-auto border border-gray-600 rounded"
           />
         </label>
         <button
@@ -47,13 +55,15 @@ export default function Home() {
           Search
         </button>
       </form>
-      {loading && <p className="mt-4">Loading...........</p>}
+      {loading && <div className="mt-4 animate-bounce">Loading...........</div>}
       {error && <p className="mt-4 text-red-500">{error}</p>}
       {weather && (
         <div className="mt-4">
           <h2 className="text-2xl">{weather.name}</h2>
           <p>Temperature: {weather.main.temp} °C</p>
           <p>Weather: {weather.weather[0].description}</p>
+            <p>Humidity: {weather.main.humidity}%</p>
+            <p>Wind Speed: {weather.wind.speed} m/s</p>
         </div>
       )}
       <footer className="pt-40 text-white py-4 md:flex items-end">
