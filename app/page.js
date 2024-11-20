@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen pt-40 text-white"  style={{ backgroundImage: `url("/sunny.png")`, backgroundSize: 'cover'}}>
+    <div className="flex flex-col items-center justify-center h-screen md:pt-40 text-white"  style={{ backgroundImage: `url("/sunny.png")`, backgroundSize: 'cover'}}>
       <h1 className="text-4xl mb-4 w-50 m-auto">Weather Watch</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
         <label className="w-50 m-auto font-extrabold text-xl md:text-4xl mb-4">
